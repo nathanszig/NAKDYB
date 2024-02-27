@@ -1,0 +1,14 @@
+
+gphp:S116"NRename this field "$Name" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(Ë·Œ‘şÿÿÿÿ
+iphp:S116"URename this field "$Description" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(íÙœı
+jphp:S116"QRename this field "$PlaceId" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(Úµ‚£ùÿÿÿÿ
+gphp:S116"NRename this field "$Role" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(âåúÿÿÿÿ
+fphp:S116""RRename this field "$Physical" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(Üå•
+dphp:S116%"PRename this field "$Mental" to match the regular expression ^[a-z][a-zA-Z0-9]*$.( ú³â
+dphp:S116("PRename this field "$Social" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(„ëÌË
+mphp:S1179"TRename this parameter "$Name" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(™÷­ üÿÿÿÿ
+ophp:S117E"[Rename this parameter "$Description" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(ğ÷ø¿
+hphp:S117i"TRename this parameter "$Role" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(ş±¨ã
+lphp:S117z"XRename this parameter "$Physical" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(×©…Ğ
+pphp:S117†"VRename this parameter "$Mental" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(¢»›²ûÿÿÿÿ
+kphp:S117’"VRename this parameter "$Social" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(ëÇ­Ç
