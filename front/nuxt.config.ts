@@ -1,7 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['@/assets/scss/main.scss'],
+  ssr: false,
+
+  // Modules
+  modules: ["@nuxtjs/tailwindcss"],
+
+  // SCSS
+  css: ["@/assets/scss/main.scss"],
   vite: {
     css: {
       preprocessorOptions: {
@@ -14,13 +20,18 @@ export default defineNuxtConfig({
   components: [
     {
       path: '~/components/atom',
-      //path: '~/components',
-      //pathPrefix: false,
+    },
+    {
+      path: '~/components/base',
     },
     {
       path: '~/components/molecule',
-      //path: '~/components',
-      //pathPrefix: false,
+    },
+    {
+      path: '~/components/organism',
+    },
+    {
+      path: '~/components/template',
     },
   ],
-})
+});
