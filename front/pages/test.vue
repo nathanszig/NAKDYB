@@ -3,6 +3,9 @@
 </script>
 
 <template>
-  <NuxtPage />
+<Bouton name="test" />
 </template>
 
+<style scoped>
+
+</style>

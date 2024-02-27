@@ -6,10 +6,21 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `
-                    @use "@/assets/scss/utils/variables.scss" as *;`,
+          additionalData: `@use "@/assets/scss/utils/variables.scss" as *;`,
         },
       },
     },
   },
+  components: [
+    {
+      path: '~/components/atom',
+      //path: '~/components',
+      //pathPrefix: false,
+    },
+    {
+      path: '~/components/molecule',
+      //path: '~/components',
+      //pathPrefix: false,
+    },
+  ],
 })
