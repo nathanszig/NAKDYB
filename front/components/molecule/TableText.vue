@@ -13,7 +13,7 @@ defineProps({
     <li>
       <div>
         <p>{{ content.title }}</p>
-        <span>{{ content.description }}</span>
+        <span>{{ content.text }}</span>
       </div>
       <Button type="checkbox"/>
     </li>
@@ -32,6 +32,8 @@ defineProps({
       flex-direction: column;
       color: var(--white-100);
       padding: 25px 40px;
+      text-align: left;
+      min-width: 800px;
       p {
         text-transform: uppercase;
         font-weight: bold;

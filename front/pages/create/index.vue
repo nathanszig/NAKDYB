@@ -4,6 +4,10 @@ const {$api} = useNuxtApp();
 const gameId = ref(null);
 const gamePlayers = ref([]);
 const features = ref(["physical", "mental", "social"]);
+const newsChoice = ref([]);
+const placeChoice = ref([]);
+const monsterChoice = ref([]);
+const pnjChoice = ref([]);
 
 /* Init page with creation on the game */
 const createGame = () => {
@@ -30,30 +34,34 @@ setInterval(getPlayers, 5000);
 /* Function to get choices of news */
 const getNews = () => {
   $api.get("news", false).then((result) => {
-    console.log(result["hydra:member"]);
+    newsChoice.value = result["hydra:member"]
   });
 };
+getNews()
 
 /* Function to get choices of places */
 const getPlaces = () => {
   $api.get("places", false).then((result) => {
-    console.log(result["hydra:member"]);
+    placeChoice.value = result["hydra:member"]
   });
 };
+getPlaces()
 
 /* Function to get choices of monsters */
 const getMonsters = () => {
   $api.get("monsters", false).then((result) => {
-    console.log(result["hydra:member"]);
+    monsterChoice.value = result["hydra:member"]
   });
 };
+getMonsters()
 
 /* Function to get choices of PNJs */
 const getPnjs = () => {
   $api.get("pnjs", false).then((result) => {
-    console.log(result["hydra:member"]);
+    pnjChoice.value = result["hydra:member"];
   });
 };
+getPnjs()
 
 /* Function to generate final game */
 const generateGame = () => {
@@ -79,7 +87,7 @@ const generateGame = () => {
 
     <!-- CONTENT -->
     <TplPlayers v-if="step === 0" :game-id="gameId" :table="gamePlayers" :features="features"/>
-    <div v-if="step === 1">aac</div>
+    <TplNews v-if="step === 1" :table="newsChoice" />
     <div v-if="step === 2">cac</div>
     <div v-if="step === 3">cc</div>
     <div v-if="step === 4">cc</div>
