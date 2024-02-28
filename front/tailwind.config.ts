@@ -17,6 +17,7 @@ export default {
       white: "#FFFFFF",
       player: "#BF7E00",
       admin: "#00B6BF",
+      "admin-20": "#00B6BF33",
       danger: "#FF0000",
       none: "transparent",
       current: "currentcolor",
