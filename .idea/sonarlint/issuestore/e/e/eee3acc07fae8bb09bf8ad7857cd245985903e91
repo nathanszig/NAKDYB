@@ -1,3 +1,8 @@
 
-P	php:S1135("4Complete the task associated to this "TODO" comment.(¬ëÑ“8ŸÖãŞ1
-\	php:S1131("@Remove the useless trailing whitespaces at the end of this line.(¬ëÑ“8 ÖãŞ1
+O	php:S1135,"4Complete the task associated to this "TODO" comment.(¯ÇÖr8şÑ£÷Ş1
+[	php:S1131,"@Remove the useless trailing whitespaces at the end of this line.(¯ÇÖr8şÑ£÷Ş1
+kphp:S1035"KSplit this 123 characters long line (which is greater than 120 authorized).(ÆÚ”öùÿÿÿÿ8şÑ£÷Ş1
+R	php:S14815"1Remove this unused "$contextData" local variable.(ÆÚ”öùÿÿÿÿ8şÑ£÷Ş1
+=	php:S11168"Remove this empty statement.(Åñ­õşÿÿÿÿ8µ©÷Ş1
+?php:S125;"Remove this commented out code.(­êÆõúÿÿÿÿ8şÑ£÷Ş1
+:php:S125@"Remove this commented out code.(ÂàÏ8şÑ£÷Ş1

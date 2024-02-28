@@ -32,11 +32,15 @@ class IaService
     ];*/
 
 
-    $body = [
+    /*$body = [
       'messages' => [
         ['role' => 'user', 'content' => 'Salut ça va ?'],
       ],
-    ];
+    ];*/
+
+    dump($iaDto);
+
+
 
 
     try {
