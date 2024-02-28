@@ -91,6 +91,6 @@ const generateGame = () => {
     </header>
 
     <!-- CONTENT -->
-    <div class="bg-danger">{{ gameId }} {{ gamePlayers }}</div>
+    <div class="bg-danger">content</div>
   </NuxtLayout>
 </template>
