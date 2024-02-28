@@ -67,6 +67,9 @@ defineProps({
         color: var(--white-100);
         filter: drop-shadow(0 0 0.75rem var(--blue-500));
       }
+      &.active:hover{
+        background-color: var(--blue-700);
+      }
     }
     // If it's the player
     &.player{
@@ -76,6 +79,9 @@ defineProps({
         background-color: var(--orange-500);
         color: var(--white-100);
         filter: drop-shadow(0 0 0.75rem var(--orange-500));
+      }
+      &.active:hover{
+        background-color: var(--orange-700);
       }
     }
     &:hover{

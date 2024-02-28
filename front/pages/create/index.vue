@@ -1,12 +1,12 @@
-<script setup lang="ts">
+<script setup>
 const step = ref(0);
-const { $api } = useNuxtApp();
+const {$api} = useNuxtApp();
 const gameId = ref(null);
 const gamePlayers = ref([]);
 
 /* Init page with creation on the game */
 const createGame = () => {
-  $api.post("games", false, { name: "" }).then((result: any) => {
+  $api.post("games", false, {name: ""}).then((result) => {
     gameId.value = result.id;
   });
 };
@@ -14,33 +14,30 @@ createGame();
 
 /* Function to get players eatch 5 secondes */
 const getPlayers = () => {
-  $api.get(`games/${gameId.value}`, false).then((result: any) => {
+  $api.get(`games/${gameId.value}`, false).then((result) => {
     gamePlayers.value = result.characters;
   });
 };
 setInterval(getPlayers, 5000);
-
-/* Function to move to the next step */
-const nextStep = () => {
-  step.value++;
-};
 </script>
 
 <template>
   <NuxtLayout name="admin">
     <!-- HEADER -->
-    <header class="border-b border-white border-solid flex pb-5 items-center">
-      <h1 class="text-admin text-2xl font-bold w-1/2">GAME MASTER</h1>
-      <div class="w-1/2 flex justify-center">
-        <Stepper
-          :step="step"
-          :steps="['Players', 'News', 'Places', 'Monsters', 'PNJs']"
-          class="w-full max-w-md mx-auto md:col-span-2 lg:col-span-1"
-        />
-      </div>
-    </header>
+    <HeaderGameMaster :step="step"/>
 
     <!-- CONTENT -->
-    <div class="bg-danger">content</div>
+    <TplPlayers v-if="step === 0" :game-id="gameId"/>
+    <div v-if="step === 1">aac</div>
+    <div v-if="step === 2">cac</div>
+    <div v-if="step === 3">cc</div>
+    <div v-if="step === 4">cc</div>
+
+    <!-- BUTTONS -->
+    <ContainerButton v-model="step"/>
   </NuxtLayout>
 </template>
+
+<style lang="scss" scoped>
+
+</style>
