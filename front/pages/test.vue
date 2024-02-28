@@ -21,11 +21,20 @@ const table = [
     isSelected: false
   }
 ]
+
+const stats = ref({
+  health: 0,
+  strenght: 10,
+  speed: 5,
+  smart: 6,
+  chance: 5,
+});
 </script>
 
 <template>
-<Button name="test" />
-  <TableText :table="table" />
+  <Button name="test"/>
+  <TableText :table="table"/>
+  <TableNumberPlayer v-model="stats" />
 </template>
 
 <style scoped>
