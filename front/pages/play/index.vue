@@ -1,10 +1,20 @@
 <script setup lang="ts">
 const gameId = ref("");
 const username = ref("");
+const error = ref(null as string | null);
 const step = ref(0);
 
-const checkGameId = () => {
-  step.value++;
+const checkGameId = async () => {
+  error.value = null;
+  const { $api } = useNuxtApp();
+  $api
+    .get(`games/${gameId.value}`, false)
+    .then((response) => {
+      step.value++;
+    })
+    .catch((err) => {
+      error.value = "No game found";
+    });
 };
 
 const next = () => {
@@ -26,6 +36,9 @@ const save = () => {
       v-model="username"
       :isPlayer="true"
     />
+
+    <!-- ERROR -->
+    <p class="text-danger w-full text-center mt-2">{{ error }}</p>
 
     <!-- SPACE -->
     <div class="flex-1" />

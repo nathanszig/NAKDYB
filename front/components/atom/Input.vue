@@ -5,7 +5,7 @@ defineProps({
   isPlayer: { type: Boolean, default: false },
 });
 
-const value = defineModel('title');
+const value = defineModel();
 </script>
 
 <template>
