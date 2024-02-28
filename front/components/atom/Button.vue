@@ -89,12 +89,15 @@ defineProps({
     display: inline-flex;
     margin: 0;
     &:before{
+      padding: 2rem;
+      width: 10rem;
+      text-align: center;
+      box-sizing: border-box;
       background-color: var(--black-700);
       border: 1px solid var(--blue-500);
       color: var(--blue-500);
       content: attr(data-off);
       cursor: pointer;
-      padding: 1rem 1rem;
       transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
     }
     &:checked::before {
