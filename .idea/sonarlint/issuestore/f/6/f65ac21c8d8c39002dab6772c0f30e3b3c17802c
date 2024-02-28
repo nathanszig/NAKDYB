@@ -1,0 +1,13 @@
+
+gphp:S116"NRename this field "$Name" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(Ë·Œ‘şÿÿÿÿ
+bphp:S116"NRename this field "$Role" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(øéËÛ
+dphp:S116"PRename this field "$GameId" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(Ù —
+fphp:S116"RRename this field "$Physical" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(Üå•
+dphp:S116!"PRename this field "$Mental" to match the regular expression ^[a-z][a-zA-Z0-9]*$.( ú³â
+dphp:S116$"PRename this field "$Social" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(„ëÌË
+mphp:S1170"TRename this parameter "$Name" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(™÷­ üÿÿÿÿ
+hphp:S117<"TRename this parameter "$Role" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(ÒÛÍ 
+ophp:S117H"VRename this parameter "$GameId" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(‡§©›ùÿÿÿÿ
+lphp:S117Y"XRename this parameter "$Physical" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(×©…Ğ
+ophp:S117e"VRename this parameter "$Mental" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(¢»›²ûÿÿÿÿ
+jphp:S117q"VRename this parameter "$Social" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(ëÇ­Ç

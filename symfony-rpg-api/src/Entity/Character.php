@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CharacterRepository::class)]
 #[ORM\Table(name: '`character`')]
-#[ApiResource]
+#[ApiResource(stateless: false)]
 class Character
 {
     #[ORM\Id]
@@ -25,6 +25,15 @@ class Character
     #[ORM\ManyToOne(inversedBy: 'characters')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Game $GameId = null;
+
+    #[ORM\Column]
+    private ?int $Physical = null;
+
+    #[ORM\Column]
+    private ?int $Mental = null;
+
+    #[ORM\Column]
+    private ?int $Social = null;
 
     public function getId(): ?int
     {
@@ -70,5 +79,41 @@ class Character
     public function __toString(): string
     {
         return $this->Name;
+    }
+
+    public function getPhysical(): ?int
+    {
+        return $this->Physical;
+    }
+
+    public function setPhysical(int $Physical): static
+    {
+        $this->Physical = $Physical;
+
+        return $this;
+    }
+
+    public function getMental(): ?int
+    {
+        return $this->Mental;
+    }
+
+    public function setMental(int $Mental): static
+    {
+        $this->Mental = $Mental;
+
+        return $this;
+    }
+
+    public function getSocial(): ?int
+    {
+        return $this->Social;
+    }
+
+    public function setSocial(int $Social): static
+    {
+        $this->Social = $Social;
+
+        return $this;
     }
 }
