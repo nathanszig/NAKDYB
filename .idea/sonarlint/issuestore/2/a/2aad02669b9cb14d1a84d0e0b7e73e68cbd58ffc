@@ -1,6 +1,3 @@
 
-nphp:S116"NRename this field "$Name" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(Ë·Œ‘şÿÿÿÿ8ü™…ÜŞ1
-mphp:S116"RRename this field "$Scenario" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(âå£8ı™…ÜŞ1
-tphp:S117-"TRename this parameter "$Name" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(™÷­ üÿÿÿÿ8ı™…ÜŞ1
-sphp:S1179"XRename this parameter "$Scenario" to match the regular expression ^[a-z_][a-zA-Z0-9_]*$.(¸‡ÉÙ8ı™…ÜŞ1
-P	php:S1066V"/Merge this if statement with the enclosing one.(ñÎ¡¼ùÿÿÿÿ8ı™…ÜŞ1
+	php:S1448"`Class "Game" has 21 methods, which is greater than 20 authorized. Split it into smaller classes.(¹æÜ…ûÿÿÿÿ8™‚øŞ1
+L	php:S1066°"/Merge this if statement with the enclosing one.(ìÌÕê8™‚øŞ1

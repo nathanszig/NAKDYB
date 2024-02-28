@@ -21,9 +21,11 @@ class PlaceCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm(),
-            TextField::new('Name'),
+            TextField::new('name'),
             TextEditorField::new('description'),
-            AssociationField::new('npcs')
+            AssociationField::new('npcs'),
+            AssociationField::new('monsters'),
+            AssociationField::new('games'),
         ];
     }
 }

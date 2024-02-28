@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Monster;
 use App\Entity\News;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -35,6 +36,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Character', 'fas fa-list', Character::class);
         yield MenuItem::linkToCrud('Game', 'fas fa-list', Game::class);
         yield MenuItem::linkToCrud('Npc', 'fas fa-list', Npc::class);
+        yield MenuItem::linkToCrud('Monster', 'fas fa-list', Monster::class);
         yield MenuItem::linkToCrud('Place', 'fas fa-list', Place::class);
         yield MenuItem::linkToCrud('News', 'fas fa-list', News::class);
     }

@@ -22,7 +22,11 @@ class GameCrudController extends AbstractCrudController
             IdField::new('id')->hideOnForm(),
             TextField::new('name'),
             TextEditorField::new('scenario'),
-            AssociationField::new('characters')
+            AssociationField::new('characters'),
+            AssociationField::new('news'),
+            AssociationField::new('places'),
+            AssociationField::new('npcs'),
+            AssociationField::new('monsters'),
         ];
     }
     
