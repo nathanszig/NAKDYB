@@ -1,30 +1,30 @@
-<script setup lang="ts">
+<script setup>
 defineProps({
-  // Type du bouton
+  // Button type
   type: {
     type: String,
     required: false,
     default: 'button'
   },
-  // Nom du bouton
+  // Button name
   name: {
     type: String,
     required: false,
     default: ''
   },
-  // Si le remplir est obligatoire
+  // If filling it out is mandatory
   isRequired: {
     type: Boolean,
     required: false,
     default: false
   },
-  // Savoir si c'est un player ou un admin
+  // Know if it's a player or an admin
   isPlayer: {
     type: Boolean,
     required: false,
     default: false
   },
-  // Savoir si l'état du bouton est actif ou non pour changer la css
+  // Know if the button state is active or not to change the css
   isActive: {
     type: Boolean,
     required: false,
@@ -41,7 +41,7 @@ defineProps({
 <style scoped lang="scss">
 .bouton{
   background-color: var(--black-700);
-  // Style du bouton en type text
+  // Button style in text type
   &[type='text']{
     border: 1px solid var(--orange-500);
     font-size: 32px;
@@ -52,14 +52,14 @@ defineProps({
       outline: none;
     }
   }
-  // Style du bouton en type button
+  // Button style in type button
   &[type='button']{
     width: 230px;
     height: 62px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    // Si c'est le maitre du jeu
+    // If it's the master of the game
     &.admin{
       border: 1px solid var(--blue-500);
       color: var(--blue-500);
@@ -69,7 +69,7 @@ defineProps({
         filter: drop-shadow(0 0 0.75rem var(--blue-500));
       }
     }
-    // Si c'est le joueur
+    // If it's the player
     &.player{
       border: 1px solid var(--orange-500);
       color: var(--orange-500);
@@ -83,7 +83,7 @@ defineProps({
       cursor: pointer;
     }
   }
-  // Style du bouton en type checkbox
+  // Style of the button in checkbox type
   &[type='checkbox']{
     appearance: none;
     display: inline-flex;

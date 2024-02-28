@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  // Contenu du tableau
+  // Table contents
   table: {
     type: Array,
     required: true
