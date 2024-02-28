@@ -6,6 +6,13 @@ export default defineNuxtConfig({
   // Modules
   modules: ["@nuxtjs/tailwindcss"],
 
+  // Environment variables
+  runtimeConfig: {
+    public: {
+      API_ENDPOINT: process.env.API_ENDPOINT,
+    },
+  },
+
   // SCSS
   css: ["@/assets/scss/main.scss"],
   vite: {

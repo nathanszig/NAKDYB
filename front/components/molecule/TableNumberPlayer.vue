@@ -4,32 +4,45 @@ defineProps({
   isEdit: {
     type: Boolean,
     required: false,
-    default: false
-  }
-})
+    default: false,
+  },
+});
 
 // Table contents
-const table = defineModel()
+const table = defineModel();
+const maxStatsPoints = 20;
+const statsPoints = computed(() => {
+  return table.value.physical + table.value.mental + table.value.social;
+});
 
 // Increment the number
 const incrementNumber = (key) => {
-  table.value[key]++
-}
+  table.value[key]++;
+};
 
 // Decrement the number
 const decrementNumber = (key) => {
-  table.value[key]--
-}
+  table.value[key]--;
+};
 </script>
 
 <template>
   <ul :class="`table-number-player`" v-for="(item, key) in table" :key="key">
-    <li>
+    <li class="h-20">
       <p>{{ key }}</p>
       <div>
-        <button v-if="isEdit && item > 0" @click="decrementNumber(key)">-</button>
-        <span>{{ item }}</span>
-        <button v-if="isEdit && item < 10" @click="incrementNumber(key)">+</button>
+        <div v-if="isEdit && item > 0">
+          <button @click="decrementNumber(key)" class="w-5">-</button>
+        </div>
+        <span class="w-10 text-center">{{ item }}</span>
+        <div class="w-5">
+          <button
+            v-if="isEdit && item < 10 && statsPoints < maxStatsPoints"
+            @click="incrementNumber(key)"
+          >
+            +
+          </button>
+        </div>
       </div>
     </li>
   </ul>
@@ -55,7 +68,8 @@ const decrementNumber = (key) => {
       span {
         margin: 0 20px;
       }
-      span, button {
+      span,
+      button {
         font-size: 30px;
       }
     }
