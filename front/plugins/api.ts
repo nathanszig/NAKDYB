@@ -2,7 +2,7 @@ export default defineNuxtPlugin((app: any) => {
   const _call = (method: string, action: string, isTokenRequired: boolean, body: object = {}) => {
     // Set headers
     const customHeaders: object = {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/ld+json',
       'Authorization': isTokenRequired ? app.$session.getToken() : undefined,
     }
 
