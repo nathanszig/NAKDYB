@@ -3,6 +3,7 @@ const step = ref(0);
 const {$api} = useNuxtApp();
 const gameId = ref(null);
 const gamePlayers = ref([]);
+const features = ref(["physical", "mental", "social"]);
 
 /* Init page with creation on the game */
 const createGame = () => {
@@ -77,7 +78,7 @@ const generateGame = () => {
     <HeaderGameMaster :step="step"/>
 
     <!-- CONTENT -->
-    <TplPlayers v-if="step === 0" :game-id="gameId"/>
+    <TplPlayers v-if="step === 0" :game-id="gameId" :table="gamePlayers" :features="features"/>
     <div v-if="step === 1">aac</div>
     <div v-if="step === 2">cac</div>
     <div v-if="step === 3">cc</div>
