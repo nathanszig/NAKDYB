@@ -12,8 +12,8 @@ defineProps({
   <ul :class="`table-text`" v-for="content in table">
     <li>
       <div>
-        <p>{{ content.title }}</p>
-        <span>{{ content.text }}</span>
+        <p>{{ content.title || content.name }}</p>
+        <span>{{ content.text || content.description }}</span>
       </div>
       <Button type="checkbox"/>
     </li>

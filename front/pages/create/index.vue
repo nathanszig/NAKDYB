@@ -57,7 +57,7 @@ getMonsters()
 
 /* Function to get choices of PNJs */
 const getPnjs = () => {
-  $api.get("pnjs", false).then((result) => {
+  $api.get("npcs", false).then((result) => {
     pnjChoice.value = result["hydra:member"];
   });
 };
@@ -88,15 +88,12 @@ const generateGame = () => {
     <!-- CONTENT -->
     <TplPlayers v-if="step === 0" :game-id="gameId" :table="gamePlayers" :features="features"/>
     <TplNews v-if="step === 1" :table="newsChoice" />
-    <div v-if="step === 2">cac</div>
-    <div v-if="step === 3">cc</div>
-    <div v-if="step === 4">cc</div>
+    <TplPlaces v-if="step === 2" :table="placeChoice" />
+    <TplMonsters v-if="step === 3" :table="monsterChoice" />
+    <TplPnj v-if="step === 4" :table="pnjChoice" />
 
     <!-- BUTTONS -->
     <ContainerButton v-model="step"/>
   </NuxtLayout>
 </template>
 
-<style lang="scss" scoped>
-
-</style>

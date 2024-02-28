@@ -23,7 +23,7 @@ defineProps({
     <h3>Part code</h3>
     <Button class="code" :name="gameId" isActive is-player/>
     <h2>Players of the game</h2>
-    <TableNumberGameMaster :table="table" :features="features" />
+    <TableNumberGameMaster :table="table" :features="features"/>
   </section>
 </template>
 

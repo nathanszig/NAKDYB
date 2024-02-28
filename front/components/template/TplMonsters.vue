@@ -9,14 +9,14 @@ defineProps({
 </script>
 
 <template>
-  <section class="tpl-news">
-    <h2>News of the game</h2>
+  <section class="tpl-monsters">
+    <h2>Monsters of the game</h2>
     <TableText :table="table" />
   </section>
 </template>
 
 <style lang="scss" scoped >
-.tpl-news{
+.tpl-monsters{
   text-align: center;
 }
 </style>
