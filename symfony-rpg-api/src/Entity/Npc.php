@@ -10,56 +10,149 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: NpcRepository::class)]
-#[ApiResource]
+#[ApiResource(stateless: false)]
 class Npc
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private int $id;
 
     #[ORM\Column(length: 255)]
-    private ?string $Name = null;
+    private string $name;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $Description = null;
-
-    #[ORM\ManyToMany(targetEntity: Place::class, inversedBy: 'npcs')]
-    private Collection $PlaceId;
+    private string $description;
 
     #[ORM\Column]
-    private array $Role = [];
+    private array $role = [];
+
+    #[ORM\Column]
+    private int $physical;
+
+    #[ORM\Column]
+    private int $mental;
+
+    #[ORM\Column]
+    private int $social;
+
+    #[ORM\ManyToMany(targetEntity: Game::class, mappedBy: 'npcs')]
+    private Collection $games;
+
+    #[ORM\ManyToMany(targetEntity: Place::class, inversedBy: 'npcs')]
+    private Collection $places;
 
     public function __construct()
     {
-        $this->PlaceId = new ArrayCollection();
+        $this->games = new ArrayCollection();
+        $this->places = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getName(): string
     {
-        return $this->Name;
+        return $this->name;
     }
 
-    public function setName(string $Name): static
+    public function setName(string $name): static
     {
-        $this->Name = $Name;
+        $this->name = $name;
 
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getDescription(): string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(string $Description): static
+    public function setDescription(string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getRole(): array
+    {
+        return $this->role;
+    }
+
+    public function setRole(array $role): static
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->name;
+    }
+
+    public function getPhysical(): int
+    {
+        return $this->physical;
+    }
+
+    public function setPhysical(int $physical): static
+    {
+        $this->physical = $physical;
+
+        return $this;
+    }
+
+    public function getMental(): int
+    {
+        return $this->mental;
+    }
+
+    public function setMental(int $mental): static
+    {
+        $this->mental = $mental;
+
+        return $this;
+    }
+
+    public function getSocial(): int
+    {
+        return $this->social;
+    }
+
+    public function setSocial(int $social): static
+    {
+        $this->social = $social;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Game>
+     */
+    public function getGames(): Collection
+    {
+        return $this->games;
+    }
+
+    public function addGame(Game $game): static
+    {
+        if (!$this->games->contains($game)) {
+            $this->games->add($game);
+            $game->addNpc($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGame(Game $game): static
+    {
+        if ($this->games->removeElement($game)) {
+            $game->removeNpc($this);
+        }
 
         return $this;
     }
@@ -67,41 +160,24 @@ class Npc
     /**
      * @return Collection<int, Place>
      */
-    public function getPlaceId(): Collection
+    public function getPlaces(): Collection
     {
-        return $this->PlaceId;
+        return $this->places;
     }
 
-    public function addPlaceId(Place $placeId): static
+    public function addPlace(Place $place): static
     {
-        if (!$this->PlaceId->contains($placeId)) {
-            $this->PlaceId->add($placeId);
+        if (!$this->places->contains($place)) {
+            $this->places->add($place);
         }
 
         return $this;
     }
 
-    public function removePlaceId(Place $placeId): static
+    public function removePlace(Place $place): static
     {
-        $this->PlaceId->removeElement($placeId);
+        $this->places->removeElement($place);
 
         return $this;
-    }
-
-    public function getRole(): array
-    {
-        return $this->Role;
-    }
-
-    public function setRole(array $Role): static
-    {
-        $this->Role = $Role;
-
-        return $this;
-    }
-
-    public function __toString(): string
-    {
-        return $this->Name;
     }
 }
