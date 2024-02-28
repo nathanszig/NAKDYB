@@ -17,15 +17,17 @@ class AppFixtures extends Fixture
     {
         for ($i = 1; $i <= 10; $i++) {
           // create 10 fake place, Game, Npc, Character and News
-          $place = new Place();
-          $place->setName('Place '.$i);
-          $place->setDescription('Description of place '.$i);
-          $manager->persist($place);
 
           $game = new Game();
           $game->setName('Game '.$i);
           $game->setScenario('Scenario of game '.$i);
           $manager->persist($game);
+
+          $place = new Place();
+          $place->setName('Place '.$i);
+          $place->setDescription('Description of place '.$i);
+          $place->addGame($game);
+          $manager->persist($place);
 
           $npc = new Npc();
           $npc->setName('Npc '.$i);

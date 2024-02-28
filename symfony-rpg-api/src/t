@@ -1,0 +1,58 @@
+ 'name': 'The Ghost Market',
+        'description': 'A clandestine market specializing in the trade of forbidden technology and supernatural artifacts.'
+        }
+        {
+         'name': 'Global Security Summit',
+         'description': 'An international conference held in a fortified hotel, where world leaders discuss covert security measures.'
+        }
+        ]
+
+        NPCs:
+        [
+                    {
+                        'name': 'Tara 'Neon' Singh',
+                        'description': 'A charismatic hacker with a penchant for cybernetics, known as the queen of the bazaar.',
+                        'physical': 4,
+                        'mental': 9,
+                        'social': 8
+                    },
+                    {
+                        'name': 'Dex Larson',
+                        'description': 'A former spy turned tech merchant, selling gadgets that are not always what they seem.',
+                        'physical': 6,
+                        'mental': 7,
+                        'social': 7
+                    },
+                    {
+                        'name': 'Viktor Morozov',
+                        'description': 'A notorious arms dealer with a penchant for the occult, always surrounded by bodyguards.',
+                        'physical': 7,
+                        'mental': 6,
+                        'social': 8
+                    },
+        ],
+
+        Adversaries: [
+
+                    {
+                        'name': 'Spectral Assassin',
+                        'description': 'Hired killers who've made pacts with dark forces, able to become invisible at will.',
+                        'physical': 8,
+                        'mental': 5,
+                        'social': 2
+                    },
+                    {
+                        'name': 'Curse Weaver',
+                        'description': 'Dark sorcerers selling their services to the highest bidder, specializing in hexes and curses.',
+                        'physical': 4,
+                        'mental': 9,
+                        'social': 3
+                    },
+                    {
+                        'name': 'Neon Phantom',
+                        'description': 'Elusive figures that blend into the neon lights, attacking when least expected.',
+                        'physical': 7,
+                        'mental': 6,
+                        'social': 2
+                    }
+        ]`;

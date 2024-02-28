@@ -7,49 +7,48 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 
 class IaService
 {
 
   private SerializerInterface $serializer;
-  public function __construct(SerializerInterface $serializer)
+
+  private LoggerInterface $logger;
+
+  public function __construct(SerializerInterface $serializer, LoggerInterface $logger)
   {
     $this->serializer = $serializer;
+    $this->logger = $logger;
   }
 
   /**
    * @throws Exception|GuzzleException
    */
-  public function sendNewsToMistral(IaDto $iaDto): string
+  public function sendNewsToMistral($userMessage, $context): string
   {
     $url = 'http://localhost:1234/v1/chat/completions';
     $client = new Client();
 
-  /*
+/*
     $requestOptions = [
       RequestOptions::BODY => $this->serializer->serialize($iaDto, 'json', ['groups' => 'ia']),
-    ];*/
+    ];
+
+*/
 
 
-    /*$body = [
+    $body = [
       'messages' => [
-        ['role' => 'user', 'content' => 'Salut ça va ?'],
+        ['role' => 'user', 'content' => $userMessage],
+        ['role' => 'system', 'content' => $context],
       ],
-    ];*/
-
-    dump($iaDto);
-
-
-
+    ];
 
     try {
-      /*$response = $client->post($url, $requestOptions);
-      $responseContent = $response->getBody()->getContents();
-      $responseDto = $this->serializer->deserialize($responseContent, IaDto::class, 'json');
-      return $responseDto->getScenario();*/
-      $response = $client->post($url, [
-        'json' => $body, // Utilisez 'json' pour envoyer le corps en tant que JSON
+      $response = $client->post($url,[
+        'json' =>  $body
       ]);
       $responseBody = $response->getBody()->getContents();
       $responseBody = json_decode($responseBody, true);
