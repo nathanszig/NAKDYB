@@ -104,6 +104,8 @@
       <excludeFolder url="file://$MODULE_DIR$/symfony-rpg-api/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/symfony-rpg-api/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/symfony-rpg-api/vendor/willdurand/negotiation" />
+      <excludeFolder url="file://$MODULE_DIR$/symfony-rpg-api/vendor/doctrine/data-fixtures" />
+      <excludeFolder url="file://$MODULE_DIR$/symfony-rpg-api/vendor/doctrine/doctrine-fixtures-bundle" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -6,6 +6,7 @@ use App\Dto\Ia\IaDto;
 use App\Dto\Ia\MessageDto;
 use App\Entity\Game;
 use App\Service\IaService;
+use GuzzleHttp\Exception\GuzzleException;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
@@ -34,6 +35,9 @@ class GameSubscriber implements EventSubscriberInterface
     ];
   }
 
+  /**
+   * @throws GuzzleException
+   */
   public function sendNewsToMistral(ViewEvent $event): void
   {
 
@@ -41,15 +45,25 @@ class GameSubscriber implements EventSubscriberInterface
     $game = $event->getControllerResult();
     $method = $event->getRequest()->getMethod();
 
-    var_dump($game instanceof Game);
-    var_dump($method === 'POST');
+    // get the context and the message from the request
 
     if ($method === 'POST' && $game instanceof Game) {
-        $context = new MessageDto('system', 'toto');
-        $userMessage = new MessageDto('user', 'salut ça va ?');
-        $iaDto = new IaDto([$context, $userMessage]);
+
+
+        $contextData = $event->getRequest()->request->get('context'); // Adjust 'context' to the actual key in your request
+        $userMessageData = $event->getRequest()->request->get('user_message');
+
+        ;
+        dump($userMessageData);
+
+      /*$context = new MessageDto('system', $contextData);
+      $userMessage = new MessageDto('user', $userMessageData);*/
+
+
+
+      /*$iaDto = new IaDto([$context, $userMessage]);
         $scenario = $this->iaService->sendNewsToMistral($iaDto);
-        $game->setScenario($scenario);
+        $game->setScenario($scenario);*/
     }
 
 
