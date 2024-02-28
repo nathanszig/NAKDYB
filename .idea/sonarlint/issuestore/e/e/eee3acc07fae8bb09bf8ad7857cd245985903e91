@@ -1,8 +1,50 @@
 
-O	php:S1135,"4Complete the task associated to this "TODO" comment.(¯ÇÖr8şÑ£÷Ş1
-[	php:S1131,"@Remove the useless trailing whitespaces at the end of this line.(¯ÇÖr8şÑ£÷Ş1
-kphp:S1035"KSplit this 123 characters long line (which is greater than 120 authorized).(ÆÚ”öùÿÿÿÿ8şÑ£÷Ş1
-R	php:S14815"1Remove this unused "$contextData" local variable.(ÆÚ”öùÿÿÿÿ8şÑ£÷Ş1
-=	php:S11168"Remove this empty statement.(Åñ­õşÿÿÿÿ8µ©÷Ş1
-?php:S125;"Remove this commented out code.(­êÆõúÿÿÿÿ8şÑ£÷Ş1
-:php:S125@"Remove this commented out code.(ÂàÏ8şÑ£÷Ş1
+kphp:S103;"KSplit this 531 characters long line (which is greater than 120 authorized).(½‡‚èúÿÿÿÿ8§Ç€ß1
+fphp:S103?"KSplit this 212 characters long line (which is greater than 120 authorized).(´×ãä8§Ç€ß1
+kphp:S103A"KSplit this 160 characters long line (which is greater than 120 authorized).(ÅìİÏûÿÿÿÿ8§Ç€ß1
+kphp:S103C"KSplit this 199 characters long line (which is greater than 120 authorized).(£ß€ûÿÿÿÿ8§Ç€ß1
+fphp:S103E"KSplit this 209 characters long line (which is greater than 120 authorized).(ùœÎï8§Ç€ß1
+kphp:S103I"KSplit this 160 characters long line (which is greater than 120 authorized).(¬¦¢ôÿÿÿÿÿ8§Ç€ß1
+kphp:S103K"KSplit this 181 characters long line (which is greater than 120 authorized).(Ÿ°½Åùÿÿÿÿ8§Ç€ß1
+kphp:S103M"KSplit this 206 characters long line (which is greater than 120 authorized).(¯Øüğüÿÿÿÿ8§Ç€ß1
+fphp:S103O"KSplit this 178 characters long line (which is greater than 120 authorized).(·¾Ğ 8§Ç€ß1
+kphp:S103S"KSplit this 226 characters long line (which is greater than 120 authorized).(†˜Æñşÿÿÿÿ8§Ç€ß1
+kphp:S103U"KSplit this 193 characters long line (which is greater than 120 authorized).(÷…äºşÿÿÿÿ8§Ç€ß1
+fphp:S103W"KSplit this 168 characters long line (which is greater than 120 authorized).(®›ê8¨Ç€ß1
+kphp:S103Y"KSplit this 184 characters long line (which is greater than 120 authorized).(›„û÷øÿÿÿÿ8¨Ç€ß1
+fphp:S103`"KSplit this 173 characters long line (which is greater than 120 authorized).(Ş°Áå8¨Ç€ß1
+kphp:S103b"KSplit this 168 characters long line (which is greater than 120 authorized).(¯šÇ„üÿÿÿÿ8¨Ç€ß1
+fphp:S103d"KSplit this 153 characters long line (which is greater than 120 authorized).(ªœ¿ã8¨Ç€ß1
+fphp:S103h"KSplit this 122 characters long line (which is greater than 120 authorized).(òˆôî8¨Ç€ß1
+kphp:S103j"KSplit this 141 characters long line (which is greater than 120 authorized).(”ÑÆìûÿÿÿÿ8¨Ç€ß1
+fphp:S103n"KSplit this 185 characters long line (which is greater than 120 authorized).(ªİ¶õ8¨Ç€ß1
+ephp:S103p"KSplit this 134 characters long line (which is greater than 120 authorized).(ïŸÕ{8¨Ç€ß1
+kphp:S103t"KSplit this 218 characters long line (which is greater than 120 authorized).(ïô«Íûÿÿÿÿ8¨Ç€ß1
+kphp:S103v"KSplit this 311 characters long line (which is greater than 120 authorized).(ÙĞÁşÿÿÿÿ8¨Ç€ß1
+kphp:S103{"KSplit this 148 characters long line (which is greater than 120 authorized).(­©€’ıÿÿÿÿ8¨Ç€ß1
+kphp:S103}"KSplit this 175 characters long line (which is greater than 120 authorized).(†ÎÜïûÿÿÿÿ8¨Ç€ß1
+lphp:S103"KSplit this 211 characters long line (which is greater than 120 authorized).(€¥üÿÿÿÿÿ8¨Ç€ß1
+gphp:S103ƒ"KSplit this 154 characters long line (which is greater than 120 authorized).(È§Ï¨8¨Ç€ß1
+gphp:S103…"KSplit this 231 characters long line (which is greater than 120 authorized).(ÏÏÆ8¨Ç€ß1
+lphp:S103‡"KSplit this 149 characters long line (which is greater than 120 authorized).(À°Á‚şÿÿÿÿ8¨Ç€ß1
+lphp:S103‰"KSplit this 195 characters long line (which is greater than 120 authorized).(ª•¯ªıÿÿÿÿ8¨Ç€ß1
+gphp:S103‹"KSplit this 352 characters long line (which is greater than 120 authorized).(Ã­Œ“8¨Ç€ß1
+gphp:S103"KSplit this 197 characters long line (which is greater than 120 authorized).(£öò–8¨Ç€ß1
+lphp:S103"KSplit this 357 characters long line (which is greater than 120 authorized).(§†µ—ıÿÿÿÿ8¨Ç€ß1
+lphp:S103‘"KSplit this 149 characters long line (which is greater than 120 authorized).(÷õüÜûÿÿÿÿ8¨Ç€ß1
+fphp:S103“"KSplit this 261 characters long line (which is greater than 120 authorized).(õ ğr8¨Ç€ß1
+gphp:S103•"KSplit this 135 characters long line (which is greater than 120 authorized).(íúÏÜ8¨Ç€ß1
+gphp:S103—"KSplit this 184 characters long line (which is greater than 120 authorized).(ïûæŠ8¨Ç€ß1
+lphp:S103¢"KSplit this 126 characters long line (which is greater than 120 authorized).(ÿàĞ£şÿÿÿÿ8¨Ç€ß1
+lphp:S103¦"KSplit this 123 characters long line (which is greater than 120 authorized).(å›¬şÿÿÿÿ8¨Ç€ß1
+gphp:S103ª"KSplit this 134 characters long line (which is greater than 120 authorized).(ÿ¬…™8¨Ç€ß1
+gphp:S103²"KSplit this 129 characters long line (which is greater than 120 authorized).(è·¯™8¨Ç€ß1
+lphp:S103¹"KSplit this 128 characters long line (which is greater than 120 authorized).(ÍäÅÏÿÿÿÿÿ8¨Ç€ß1
+lphp:S103À"KSplit this 130 characters long line (which is greater than 120 authorized).(Œ–¡†ùÿÿÿÿ8¨Ç€ß1
+lphp:S103Ë"KSplit this 125 characters long line (which is greater than 120 authorized).(Í‹ñáúÿÿÿÿ8¨Ç€ß1
+lphp:S103Ò"KSplit this 136 characters long line (which is greater than 120 authorized).(Û·‚¡øÿÿÿÿ8¨Ç€ß1
+lphp:S103Ù"KSplit this 121 characters long line (which is greater than 120 authorized).(¨ŸŞüÿÿÿÿ8¨Ç€ß1
+R	php:S14810"1Remove this unused "$newsContent" local variable.(‹¸‡§ùÿÿÿÿ8íšû€ß1
+Z	php:S18542"9Remove this useless assignment to local variable '$npcs'.(ÅÜÖßÿÿÿÿÿ8Ìá†ß1
+;php:S125á"Remove this commented out code.( ÆÊª8©Ç€ß1
+php:S138("This function "sendNewsToMistral" has 180 lines, which is greater than the 150 lines authorized. Split it into smaller functions.(×²¡¾8©Ç€ß1
