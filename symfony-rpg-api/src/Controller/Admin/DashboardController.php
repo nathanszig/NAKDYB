@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\News;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -19,7 +20,7 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-        return $this->redirect($adminUrlGenerator->setController(CharacterCrudController::class)->generateUrl());
+        return $this->redirect($adminUrlGenerator->setController(NpcCrudController::class)->generateUrl());
     }
 
     public function configureDashboard(): Dashboard
@@ -35,5 +36,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Game', 'fas fa-list', Game::class);
         yield MenuItem::linkToCrud('Npc', 'fas fa-list', Npc::class);
         yield MenuItem::linkToCrud('Place', 'fas fa-list', Place::class);
+        yield MenuItem::linkToCrud('News', 'fas fa-list', News::class);
     }
 }
